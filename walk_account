@@ -6,7 +6,7 @@
 #SBATCH -J YOYO01
 #SBATCH -N 1 
 #SBATCH -n 40
-#SBATCH --time=15-00:00:00 
+#SBATCH --time=08-00:00:00 
 #SBATCH --mail-type=ALL
 #SBATCH --output=out
 #SBATCH --error=err
@@ -25,7 +25,7 @@ ulimit -s unlimited
 ulimit -l unlimited
 export OMP_NUM_THREADS=1
 
-for i in {1..200}
+for i in {1..100}
 do 
     cd result$i
     mpirun /truba/home/modarresi/vasp/vasp_std
